@@ -16,13 +16,14 @@ public class PlayerSetup : NetworkBehaviour
             for(int i = 0; i < componentsToDisable.Length; i++){
                 componentsToDisable[i].enabled = false;
             }
-        }
-        else{
+        }else{
             sceneCamera = Camera.main;
             if(sceneCamera != null){
                 sceneCamera.gameObject.SetActive(false);
             }
+            
         }
+     
     }
 
     void OnDisable(){
@@ -31,9 +32,4 @@ public class PlayerSetup : NetworkBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
